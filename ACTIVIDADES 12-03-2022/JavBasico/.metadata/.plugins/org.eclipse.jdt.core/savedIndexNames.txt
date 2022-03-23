@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\Miguel\Desktop\MIGUEL\DESARROLLO DE APLICACIONES FULL STACK JAVA TRAINEE\MODULO 4\JavBasico\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2640988.index
+3620629805.index
+2604055215.index
