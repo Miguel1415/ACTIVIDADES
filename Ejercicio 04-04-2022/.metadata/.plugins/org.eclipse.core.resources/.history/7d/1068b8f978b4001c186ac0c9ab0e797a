@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class MainTransporte {
+
+	public static void main(String []args) 
+	{
+		List<Transporte> activos = new ArrayList<>();
+		activos.add(new Automovil null, 2000, 7900000, 0, 0) );
+		activos.add(new Automovil(null, 2000, 7900000, 0, 0) );
+		activos.add(new Bicicleta("NA", 50,1,2, 150000) );
+		activos.add(new Bicicleta("NA", 80,1,2, 200000) );
+		
+		
+		
+		Set<Transporte> activosOrdenados = new TreeSet();
+		for(Transporte transporte : activos) 
+		{
+			activosOrdenados.add(transporte);
+		}
+		activosOrdenados.forEach(System.out::println);
+		
+	}
+}

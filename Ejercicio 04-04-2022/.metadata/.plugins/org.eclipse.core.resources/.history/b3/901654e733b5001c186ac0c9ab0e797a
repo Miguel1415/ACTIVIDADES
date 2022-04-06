@@ -1,0 +1,52 @@
+package app;
+
+
+importar  Java . útil _ Lista de arreglos ;
+importar  Java . útil _ colecciones ;
+importar  Java . útil _ comparador ;
+importar  Java . útil _ lista ;
+importar  Java . útil _ Establecer ;
+importar  Java . útil _ ConjuntoÁrbol ;
+
+ modelo de importación . Automóvil ;
+ modelo de importación . bicicleta ;
+ modelo de importación . transporte ;
+ orden de importación . OrdenTransporteByCapacidadCargaDesc ;
+
+ transporte principal de clase  pública {
+
+	public  static  void  main ( String [] args ) {
+		
+		List < Transporte > activos = new  ArrayList <>();
+		activos . agregar ( nuevo  Automovil ( 2000 , 7900000 ) );
+		activos . agregar ( nueva  Bicicleta ( "NA" , 50 , 1 , 2 , 150000 ));
+		activos . agregar ( nuevo  Automovil ( 2000 , 11900000 ) );		
+		activos . add ( nueva  Bicicleta ( "NA" , 80 , 1 , 2 , 200000 ));
+		
+		// Orden Artificial (Comparador de Interfaz)
+		Colecciones . sort ( activos , new  OrdenTransporteByCapacidadCargaDesc ());
+		activos . forEach ( Sistema . fuera :: println );
+		
+		/*
+		 * Orden Natural (Interfaz Comparable)
+		Colecciones.sort(activos);		
+		activos.forEach( System.out::println );
+		*/
+		
+		/*
+		 * Orden natural automático con clase TreeSet
+		Set<Transporte> activosOrdenados = new TreeSet<>( activos );
+		activosOrdenados.forEach( System.out::println );
+		*/ 
+		
+		/*
+		 * Orden Natural con inserción de uno en uno
+		Set<Transporte> activosOrdenados = new TreeSet<>( );
+		for( Transporte transporte : activos ) {
+			activosOrdenados.add(transporte);
+		}
+		activosOrdenados.forEach( System.out::println );
+		*/
+	}
+
+}

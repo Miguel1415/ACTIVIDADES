@@ -1,0 +1,46 @@
+package app;
+
+
+importar  Java . útil _ Lista de arreglos ;
+importar  Java . útil _ matrices ;
+importar  Java . útil _ colecciones ;
+importar  Java . útil _ comparador ;
+importar  Java . útil _ lista ;
+
+ modelo de importación . Automóvil ;
+ modelo de importación . moto ;
+ modelo de importación . terrestre ;
+
+ orden principal de clase  pública {
+
+	public  static  void  main ( String [] args ) {
+		Automovil  auto1 = nuevo  Automovil ( 1000 , 5000000 , "XRZA98" );
+		Automovil  auto2 = nuevo  Automovil ( 1300 , 3000000 , "RRAA10" );
+		Automovil  auto3 = new  Automovil ( 1000 , 5000000 , "jjkk36" );
+		Automovil  auto4 = nuevo  Automovil ( 1500 , 9000000 , "xrza98" );
+		
+		Moto  moto1 = Moto nueva  ( 500 , 3000000 , "RKA11" );
+		Moto  moto2 = Moto nueva  ( 400 , 2500000 , "zsj45" );
+		Moto  moto3 = Moto nueva  ( 550 , 2000000 , "ZSJ45" );
+		Moto  moto4 = Moto nueva  ( 430 , 1900000 , "ABC99" );
+
+		List < Terrestre > activos = new  ArrayList <>(
+			arreglos _ asList ( auto1 , auto2 , auto3 , auto4 , moto1 , moto2 , moto3 , moto4 )
+		);
+		
+		activos . forEach ( Sistema . fuera :: println );
+		sistema _ fuera _ imprimirln ();
+		
+		Colecciones . sort ( activos , Comparator . comparendo ( Terrestre :: getAvaluo ));
+		activos . forEach ( Sistema . fuera :: println );
+		
+		sistema _ fuera _ imprimirln ();
+		Colecciones . sort ( activos , Comparator . comparendo ( Terrestre :: getCapacidadCarga ));
+		activos . forEach ( Sistema . fuera :: println );
+		
+		sistema _ fuera _ imprimirln ();
+		Colecciones . inversa ( activos );
+		activos . forEach ( Sistema . fuera :: println );
+	}
+
+}

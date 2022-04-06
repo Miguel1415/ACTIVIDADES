@@ -1,0 +1,64 @@
+package modelo;
+
+public class Automovil extends Terrestre{
+protected int puertas = 4;
+	
+	public Automovil(String tipoMotor, double capacidadCarga, int capacidadPasajeros, int cantRuedas, String ppu, int puertas) {		
+		super("gasolina", capacidadCarga, 2, 4, avaluo);
+		this.ppu = ppu;
+	}
+	public Automovil(double capacidadCarga , int avaluo) 
+	{
+		super("gasolina", capacidadCarga, 2,4,avaluo);
+	}
+	 
+	public Automovil(double capacidadCarga, int capacidadPasajeros, int cantRuedas, String ppu, int puertas) {		
+		super("gasolina", capacidadCarga, 2, 4, avaluo);
+		this.ppu = ppu;
+	}
+		
+public Automovil(souble capacidadCarga) 
+{
+	super("gasolina", capacidadCarga,2,4);
+	}
+	
+public Automovil(String tipoMotor, double capacidadCarga, int capacidadPasajeros, int cantRuedas, String ppu, int puertas) {		
+	super( tipoMotor,capacidadCarga, cantidadPasajeros, cantidadRuedas, avaluo);
+	this.puertas = puertas;
+}
+
+
+public hashCode() 
+{
+	return ppu.toUpperCase().hashCode();
+			}
+
+
+	public boolean equals (Object obj) 
+	{
+		if(!(obj instanceof Automovil)) 
+		{
+			return false;
+		}
+	}
+	public Automovil(String tipoMotor, double capacidadCarga, int capacidadPasajeros, int cantRuedas, int puertas) {
+		super(tipoMotor, capacidadCarga, capacidadPasajeros, cantRuedas);
+		this.puertas = puertas;
+	}
+	
+	@Override
+	public void trasladarse() {
+		// super.trasladarse(); // print "Transporte: trasladándose....."
+		System.out.println("Automovil: trasladándose ...");
+	}
+	
+	// GETTERS Y SETTERS
+	public int getPuertas() {
+		return puertas;
+	}
+
+	public void setPuertas(int puertas) {
+		this.puertas = puertas;
+	}
+
+}

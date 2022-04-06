@@ -1,0 +1,28 @@
+package modelo;
+
+public class Moto extends Terrestre{
+	
+	protected String ppu;
+	public Moto(double capacidadCarga, int avaluo, String ppu) 
+	{
+		super ("gasolina", capacidadCarga, 2, 2, avaluo);
+		this.ppu = ppu;
+	}
+
+
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+	public String getPpu() {
+		return ppu;
+	}
+	public void setPpu(String ppu) {
+		this.ppu = ppu;
+	}

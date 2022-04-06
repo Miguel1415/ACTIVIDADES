@@ -1,0 +1,40 @@
+package app;
+
+
+import java.util.HashSet;
+import java.util.Set;
+
+import modelo.Automovil;
+import modelo.Moto;
+import modelo.Transporte;
+
+
+public class MainDuplicados {
+	public static void main (String [] args) 
+	{
+		Automovil auto1 = new Automovil (1000, 2000000, "podi89");
+		Automovil auto2 = new Automovil (1000, 4000000, "fher89");
+		Automovil auto3 = new Automovil (1000, 3000000, "fldi22");
+		Automovil auto4 = new Automovil (1000, 9000000, "tudi90");
+		
+		Moto moto1 = new Moto (500, 2500000, "jui35");
+		Moto moto2 = new Moto (500, 1500000, "jui35");
+		Moto moto3 = new Moto (500, 2200000, "jui35");
+		Moto moto4 = new Moto (500, 3500000, "jui35");
+		
+		Set<Transporte> activos = new HashSet<>();
+		activos.add(auto1);
+		activos.add(auto2);
+		activos.add(auto3);
+		activos.add(auto4);
+		
+		activos.add(moto1);
+		activos.add(moto2);
+		activos.add(moto3);
+		activos.add(moto4);
+		
+		
+		activos.forEach(System.out::println);
+	}
+
+}

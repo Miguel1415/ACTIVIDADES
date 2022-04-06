@@ -1,0 +1,112 @@
+package app;
+
+
+importar  Java . útil _ conjunto hash ;
+importar  Java . útil _ Establecer ;
+
+ modelo de importación . Automóvil ;
+ modelo de importación . moto ;
+ modelo de importación . transporte ;
+
+ clase  pública MainDuplicados {
+
+	public  static  void  main ( String [] args ) {
+		Profesor  profesor1 = nuevo  Profesor ( 1 , "Juan P." );
+		Profesor  profesor2 = nuevo  Profesor ( 2 , "Ramon P." );
+		Profesor  profesor3 = nuevo  Profesor ( 3 , "Jorge P." );
+		
+		Alumno  alumno1 = alumno nuevo  ( 1 , "Raquel A." );
+		Alumno  alumno2 = alumno nuevo  ( 2 , "Carolina A." );
+		Alumno  alumno3 = alumno nuevo  ( 3 , "Simona A." );
+		
+		sistema _ fuera _ printf ( "profesor1 hashCode() = %d %n" , profesor1 . hashCode ());
+		sistema _ fuera _ printf ( "alumno1 hashCode() = %d %n" , alumno1 . hashCode ());
+		sistema _ fuera _ printf ( "profesor1 es igual a alumno1 = %b %n" , profesor1 . equals ( alumno1 ));
+		sistema _ fuera _ imprimirln ();
+		sistema _ fuera _ printf ( "profesor2 hashCode() = %d %n" , profesor2 . hashCode ());
+		sistema _ fuera _ printf ( "codigo hash alumno2() = %d %n" , alumno2 . codigo hash ());
+		sistema _ fuera _ printf ( "profesor2 es igual a alumno2 = %b %n" , profesor2 . equals ( alumno2 ));
+		
+		Establecer < Persona > personas = new  HashSet <>();
+		personajes _ agregar ( profesor1 );
+		personajes _ agregar ( profesor2 );
+		personajes _ agregar ( profesor3 );
+		
+		personajes _ añadir ( alumno1 );
+		personajes _ añadir ( alumno2 );
+		personajes _ añadir ( alumno3 );
+		
+		sistema _ fuera _ imprimirln ();
+		personajes _ forEach ( p -> System . out . printf ( "ID: %d Nombre: %s %n" , p . getId (), p . getNombre ()));
+	}
+	
+	public  static  void  duplicadoActivos () {
+		Automovil  auto1 = nuevo  Automovil ( 1000 , 5000000 , "XRZA98" );
+		Automovil  auto2 = nuevo  Automovil ( 1300 , 3000000 , "RRAA10" );
+		Automovil  auto3 = new  Automovil ( 1000 , 5000000 , "jjkk36" );
+		Automovil  auto4 = nuevo  Automovil ( 1500 , 9000000 , "xrza98" );
+		
+		Moto  moto1 = Moto nueva  ( 500 , 3000000 , "RKA11" );
+		Moto  moto2 = Moto nueva  ( 400 , 2500000 , "zsj45" );
+		Moto  moto3 = Moto nueva  ( 550 , 2000000 , "ZSJ45" );
+		Moto  moto4 = Moto nueva  ( 430 , 1900000 , "ABC99" );
+		
+		Set < Transporte > activos = new  HashSet <>();
+		activos . añadir ( auto1 );
+		activos . añadir ( auto2 );
+		activos . añadir ( auto3 );
+		activos . añadir ( auto4 );
+
+		activos . añadir ( moto1 );
+		activos . añadir ( moto2 );
+		activos . añadir ( moto3 );
+		activos . añadir ( moto4 );
+		
+		activos . forEach ( Sistema . fuera :: println );
+	}
+
+}
+
+ Persona de clase {
+	 identificador int  protegido ;
+	protegido  String  nombre ;
+	
+	 Persona pública ( int  id , String  nombre ) {
+		esto _ identificación = identificación ;
+		esto _ nombre = nombre ;
+	}
+	
+	public  int  getId () { devolver  id ;}
+	public  String  getNombre () { return  nombre ;}
+
+	@ anular
+	 código hash público int  () {		
+		devolver  entero . valor de ( id ). código hash ();
+	}	
+}
+
+ El alumno  extiende  la clase Persona {
+	public  Alumno ( int  id , String  nombre ) {
+		súper ( id , nombre );
+	}
+	
+	@ anular
+	public  boolean  equals ( Objeto  obj ) {
+		si (!( obj  instancia del  alumno )) devuelve  falso ;
+		Alumno  otroAlumno = ( Alumno ) obj ;
+		devolver  esto . id == otroAlumno . obtener Id ();
+	}
+}
+
+class  Profesor  extiende  Persona {
+	public  Profesor ( int  id , String  nombre ) {
+		súper ( id , nombre );
+	}
+	
+	@ anular
+	public  boolean  equals ( Objeto  obj ) {
+		if ( !( obj  instancia del  Profesor )) devuelve  false ;
+		Profesor  otro Profesor = ( Profesor ) obj ;
+		devolver  esto . id == otroProfesor . obtener Id ();
+	}
+}
