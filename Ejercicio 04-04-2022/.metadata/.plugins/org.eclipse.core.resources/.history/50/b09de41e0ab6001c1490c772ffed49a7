@@ -1,0 +1,32 @@
+package app;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class MainColas {
+
+	public static void main(String[] args) {
+		//cola FIFO first in, first out primero en entrar, primero en salir
+		Queue<String> filaSupermercado = new LinkedList<>();
+		filaSupermercado.add("Pedro");
+		//se puede utilizar offer() p add()
+		//la diferencia es que add() lanxa una Excepcion
+		//ante cualquier problema
+		//y offer() solo retorna false ante un problema
+		filaSupermercado.offer("Juan");
+		filaSupermercado.add("Carolina");
+		filaSupermercado.add("Sergio");
+
+		//mostrar elementos 
+		System.out.println(filaSupermercado);
+		String persona = filaSupermercado.poll();//se saca alguien de la cola
+		System.out.printf("Stendiendo a %s........%n", persona);
+		System.out.println(filaSupermercado);
+
+
+		
+		
+		
+	}
+
+}
